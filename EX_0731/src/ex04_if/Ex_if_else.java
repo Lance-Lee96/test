@@ -1,5 +1,7 @@
 package ex04_if;
 
+import java.util.Scanner;
+
 public class Ex_if_else {
 
 	public static void main(String[] args) {
