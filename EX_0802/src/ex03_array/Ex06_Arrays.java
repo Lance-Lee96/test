@@ -33,7 +33,7 @@ public class Ex06_Arrays {
 		System.out.println("정렬후 : " + Arrays.toString(arr));
 		
 		//내림차순 정렬
-		//기본자료혀으이 배열로는 내림차순 정렬이 불가능하다.
+		//기본자료의 배열로는 내림차순 정렬이 불가능하다.
 		//기본자료형의 클래스타임이 필요하다.
 		//int -> Integer
 		
