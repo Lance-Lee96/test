@@ -1,0 +1,123 @@
+- 만일 두번째, 세번째 제네릭이 필요하다면 S, U 로 이어나간다.
+- 명명하고 싶은 대로 아무 단어나 넣어도 문제는 없지만
+대중적으로 통상적인 네이밍이 있으면 개발이 용이해지기 때문에
+암묵적인 규칙이 존재한다.
+
+<T>	타입(TYPE)
+<E>	요소(Element)
+<K>	키(Key)
+<V>	값(Value)
+<N>	숫자(Number)
+
+List컬렉션
+
+- 배열과 유사한 자료구조로 중복이 허용되면서 저장순서가 유지 되는 구조를 제공
+- 배열처럼 index를 사용해 데이터를 저장하고 찾게된다.
+- 단, 배열과는 다르게 크기의 제한이 없으며 삽입, 삭제, 변경의 기능이 자유롭다.
+- 데이터의 크기를 특정할 수 없는 다량의 데이터를 저장할 때 용이하게 사용할 수 있다.
+
+List에서 제공하는 주요 메서드
+
+void add(E e)		삽입		데이터를 순차적으로 삽입
+void add(int index, E e) 	중간삽입		원하는 index 위치에 삽입
+void set(int index, E e)	치환		원하는 index 위치에 값 변경
+E get(int index)		반환		선택된 index 위치에 값 반환
+void remove(int index)	삭제		선택된 index 위치의 값 삭제
+void clear()		전체삭제		모든 데이터 삭제
+int size()			크기		저장된 데이터의 개수 반환
+boolean contains(Object o)	검색		데이터 존재 여부 확인
+
+ArrayList
+가장 많이 사용하는 List 인터페이스의 대표적인 구현 클래스이다.
+JDK 1.2부터 제공된 ArrayList는 내부적으로 배열을 이용해 구현되어 배열과 호환성이 좋은 자료구조이다.
+
+List<데이터타입> list = new ArrayList<데이터타입>();
+
+JDK 1.7 이후부터는 Collection의 선언이 간소화되었다.
+
+List<데이터타입> list = new ArrayList<>();
+
+회원정보를 저장
+
+ArrayList<String> name = new ArrayList<>();
+ArrayList<Integer> age = new ArrayList<>();
+ArrayList<String> address = new ArrayList<>();
+
+
+고객의 인적사항을 추가하고, 삭제하고, 확인하기 위한 문제출제.
+
+이름과 나이, 번호를 갖는 Person클래스를 만든 후, ArrayList를 사용하여
+아래의 결과처럼 Person객체의 정보추가와 전체정보 보기를 할 수 있도록 만들어보자  
+아래의 기능은 PersonManger클래스에서 personMgr()메서드를 통해 만든다.
+
+결과 : 
+1. 정보추가
+2. 정보삭제
+3. 전체정보
+4. 종료
+항목선택 : 1 <- 정보추가 항목
+-----정보추가-----
+이름 : 1
+나이 : 1
+전화 : 1
+정보가 저장되었습니다.
+
+1. 정보추가
+2. 정보삭제
+3. 전체정보
+4. 종료
+항목선택 : 3 <- 정보보기 항목
+----전체정보----
+등록인원 1명
+이름 : 1
+나이 : 1
+전화 : 1
+
+
+Set
+- List 와는 달리 객체의 저장 순서를 보장하지 않는다.
+- Set 컬렉션은 수학의 집합과 유사한 개념을 지니고 있다.
+- List 컬렉션은 저장시 중복을 허용하지만 Set 컬렉션은 데이터의 중복을 허용하지 않는다.
+- 데이터를 저장할 대 순서, 즉 index를 부여하지 않기 때문에 데이터가 입력된 순서대로 출력된다는 보장이 없다.
+
+Set인터페이스에서 제공하는 메서드
+void add(E e)		데이터를 순차적으로 삽입
+void remove(Object o)	선택된 값 삭제
+void clear()		모든 데이터 삭제
+int size()			저장된 데이터의 개수 반환
+boolean contains(Object o)	데이터 존재 여부 확인
+
+HashSet
+- Set인터페이스에서 가장 많이 사용되는 클래스로 인터페이스를 상속받아 구현된다.
+
+
+반복자(Iterator)
+- Iterator는 List컬렉션에서 제공하는 인터페이스로 사전적인 의미로는
+'반복하다'라는 뜻을 지니고 있다.
+- List 컬렉션의 요소를 순회하여 하나씩 추출하는데 사용한다.
+- 반복자라고도 불리는 Iterator 객체는 선언된 컬렉션 객체에서 가져와 사용된다.
+
+Iterator 메서드
+boolean hasNext()		다음에 순회할 데이터 유무 확인
+			가져올 객체가 있으면 true
+E next()			다음 위치의 데이터로 이동하여 반환
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
